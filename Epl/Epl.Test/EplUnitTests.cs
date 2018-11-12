@@ -45,6 +45,7 @@ namespace Epl.Test
             Assert.Equal(9, oDatatable.Columns.Count);
             Assert.Equal(21, oDatatable.Rows.Count);
             Assert.Equal("8. Aston_Villa", oDatatable.Rows[0].ItemArray[0].ToString());
+            Assert.Contains("----", oDatatable.Rows[oDatatable.Rows.Count - 4].ItemArray[0].ToString());
         }
     }
 }
