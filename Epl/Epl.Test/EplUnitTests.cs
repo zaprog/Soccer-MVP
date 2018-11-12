@@ -1,4 +1,5 @@
 using Epl.Model;
+using System.IO;
 using Xunit;
 
 namespace Epl.Test
@@ -6,8 +7,8 @@ namespace Epl.Test
     public class EplUnitTests
     {
         EplModel oEplModel = new EplModel();
-        string csvfile = @"football.csv";
-        string otherfile = @"football.txt";
+        string otherfile = Path.GetFullPath(@"..\..\..\..\football.txt");
+        string csvfile = Path.GetFullPath(@"..\..\..\..\football.csv");
 
         [Fact]
         public void IsFileExistsandValid()
